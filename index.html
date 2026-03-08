@@ -1,19 +1,576 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>STAFABAND456 - Information</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="google-site-verification" content="19W1UFUU40TnI3u2dD2tru6r9-73u56U0XfDvH4WBLo" />
-        <meta name="google-site-verification" content="hGygpWAjw39db2q3UrK1j1F-f3rDc6xaHwwPHEjEqqo" />
-        <meta name="google-site-verification" content="8_uv9TnjL2tlZDk4d0gEY0rmUkbz75BU2iNM_Z7siXs" />
-        <meta name="google-site-verification" content="L56YBmkugb0Ta2uH_57umO890q_1tzjUtK2IuA1rd8o" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="stylesheet" href="/style.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content="Informasi situs stafaband original dapat dilihat di halaman ini"/>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="google-site-verification" content="19W1UFUU40TnI3u2dD2tru6r9-73u56U0XfDvH4WBLo" />
+  <meta name="google-site-verification" content="hGygpWAjw39db2q3UrK1j1F-f3rDc6xaHwwPHEjEqqo" />
+  <meta name="google-site-verification" content="8_uv9TnjL2tlZDk4d0gEY0rmUkbz75BU2iNM_Z7siXs" />
+  <meta name="google-site-verification" content="L56YBmkugb0Ta2uH_57umO890q_1tzjUtK2IuA1rd8o" />
+  
+  <!-- SEO OPTIMIZATION (UNIQUE CONTENT) -->
+  <title>Stafaband: Tempat Download Lagu MP3 Terbaru Gratis & Cepat</title>
+  <meta name="description" content="Cari dan unduh jutaan lagu MP3 gratis di Stafaband. Platform penyedia musik terbaru dengan audio jernih 320kbps, tanpa registrasi, dan bebas hambatan.">
+  <meta name="keywords" content="stafaband, download lagu stafaband, situs stafaband, download lagu mp3, mp3 gratis, musik stafaband, stafaband asli">
+  
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Stafaband - Mesin Pencari Lagu MP3 Premium">
+  <meta property="og:description" content="Akses jutaan lagu MP3 favoritmu. Download super kilat, audio 320kbps jernih, dan 100% gratis di Stafaband.">
+  <meta property="og:url" content="https://stafaband456.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Stafaband MP3">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <!-- FONTS: OUTFIT (Modern, Geometric, Premium look) & JQUERY UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <style>
+    :root {
+      --accent-1: #c084fc; /* Light purple */
+      --accent-2: #ec4899; /* Pink */
+      --bg-base: #09090b; /* Very dark zinc */
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --text-main: #ffffff;
+      --text-dim: #a1a1aa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Aurora Background Effects */
+    .aurora {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .aurora-1, .aurora-2 {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      animation: float 20s infinite ease-in-out alternate;
+    }
+    .aurora-1 {
+      top: -10%; left: -10%;
+      width: 50vw; height: 50vw;
+      background: var(--accent-1);
+    }
+    .aurora-2 {
+      bottom: -10%; right: -10%;
+      width: 40vw; height: 40vw;
+      background: var(--accent-2);
+      animation-delay: -5s;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(50px, 50px) scale(1.1); }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar Glassmorphism */
+    .navbar {
+      background: rgba(9, 9, 11, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 76px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 900;
+      font-size: 26px;
+      letter-spacing: -0.5px;
+    }
+    .brand svg { 
+      stroke: url(#grad1); 
+    }
+    .nav-pill {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-dim);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 110px 0 90px;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(192, 132, 252, 0.1);
+      color: var(--accent-1);
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      border: 1px solid rgba(192, 132, 252, 0.2);
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 6.5vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-dim);
+      max-width: 650px;
+      margin: 0 auto 48px;
+      font-weight: 300;
+    }
+
+    /* Premium Search Bar */
+    .search-wrapper {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+      z-index: 50;
+      margin-bottom: 20px;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 60px;
+      padding: 8px 8px 8px 28px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .search-box:focus-within {
+      border-color: rgba(192, 132, 252, 0.5);
+      box-shadow: 0 0 30px rgba(192, 132, 252, 0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+    .search-icon { color: var(--text-dim); display: flex; align-items: center; }
+    .search-input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 18px;
+      font-size: 18px;
+      color: var(--text-main);
+      outline: none;
+      font-family: inherit;
+      font-weight: 400;
+    }
+    .search-input::placeholder { color: #52525b; font-weight: 300; }
+    .search-btn {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 0 36px;
+      height: 56px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      box-shadow: 0 10px 20px rgba(236, 72, 153, 0.2);
+    }
+    .search-btn:hover { 
+      transform: scale(1.03); 
+      box-shadow: 0 15px 25px rgba(236, 72, 153, 0.3);
+    }
+
+    /* Modern Features Grid */
+    .features-section { padding: 40px 0 100px; }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+      border: 1px solid var(--glass-border);
+      padding: 40px 32px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-1), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .feature-card:hover { 
+      transform: translateY(-8px); 
+      background: rgba(255,255,255,0.04);
+    }
+    .feature-card:hover::before { opacity: 1; }
+    
+    .f-icon {
+      width: 58px; height: 58px;
+      background: rgba(192, 132, 252, 0.1);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      color: var(--accent-1);
+    }
+    .feature-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.3px; }
+    .feature-card p { color: var(--text-dim); font-size: 15px; font-weight: 300; line-height: 1.7; }
+
+    /* SEO Article & Alternative Content */
+    .seo-container {
+      background: rgba(0,0,0,0.4);
+      border-top: 1px solid var(--glass-border);
+      padding: 90px 0;
+    }
+    .article-wrap { max-width: 800px; margin: 0 auto; }
+    .article-wrap h2 { font-size: 32px; margin-bottom: 24px; font-weight: 800; letter-spacing: -1px; }
+    .article-wrap h3 { font-size: 22px; margin: 36px 0 16px; font-weight: 700; color: var(--accent-1); }
+    .article-wrap p { color: var(--text-dim); margin-bottom: 18px; font-size: 16.5px; text-align: justify; line-height: 1.8; font-weight: 300; }
+    .article-wrap strong { color: var(--text-main); font-weight: 600; }
+
+    /* FAQ Section */
+    .faq-grid { margin-top: 30px; display: grid; gap: 16px; }
+    .faq-item {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--glass-border);
+      padding: 24px;
+      border-radius: 20px;
+    }
+    .faq-item h4 { font-size: 18px; margin-bottom: 10px; font-weight: 600; }
+    .faq-item p { margin-bottom: 0; font-size: 15px; }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--glass-border);
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .footer-brand { 
+      color: var(--text-main); font-size: 22px; font-weight: 900; margin-bottom: 24px; 
+      display: flex; align-items: center; justify-content: center; gap: 8px; 
+    }
+    .footer-links { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-bottom: 30px; }
+    .footer-links a , .footer-copy a{ color: var(--text-dim); text-decoration: none; font-size: 15px; font-weight: 400; transition: color 0.2s; }
+    .footer-links a:hover, .footer-copy a:hover { color: var(--text-main); }
+    .footer-copy { font-size: 14px; color: #52525b; }
+
+    /* Custom UI Autocomplete - Glassmorphism Edit */
+    .ui-autocomplete {
+      position: absolute !important;
+      background: rgba(24, 24, 27, 0.95) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid var(--glass-border) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6) !important;
+      padding: 16px 0 !important;
+      margin-top: 16px !important;
+      z-index: 1000 !important;
+      max-height: 380px;
+      overflow-y: auto;
+      box-sizing: border-box !important;
+    }
+    /* Scrollbar styling for autocomplete */
+    .ui-autocomplete::-webkit-scrollbar { width: 6px; }
+    .ui-autocomplete::-webkit-scrollbar-track { background: transparent; }
+    .ui-autocomplete::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+    
+    .ui-menu-item { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+    .ui-menu-item-wrapper {
+      padding: 12px 28px !important;
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      color: var(--text-dim) !important;
+      border: none !important;
+      display: flex !important;
+      align-items: center !important;
+      cursor: pointer !important;
+      transition: all 0.2s;
+    }
+    .ui-menu-item-wrapper:hover, .ui-state-active {
+      background: rgba(192, 132, 252, 0.1) !important;
+      color: var(--text-main) !important;
+      margin: 0 !important;
+      padding-left: 32px !important;
+    }
+    .ui-helper-hidden-accessible { display: none !important; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero { padding: 70px 0 60px; }
+      .nav-pill { display: none; }
+      .search-box { padding: 6px 6px 6px 20px; border-radius: 40px; }
+      .search-input { font-size: 16px; padding: 14px 10px; }
+      .search-btn { padding: 0 24px; height: 50px; font-size: 15px; border-radius: 40px; }
+      .feature-card { padding: 30px 24px; }
+      .article-wrap h2 { font-size: 26px; }
+    }
+  </style>
 </head>
 <body>
-<h1>STAFABAND456</h1>
-<p>Halaman ini hanya digunakan sebagai info URL Website original <a href="https://stafaband456.eu.org" target="_blank">stafaband</a></p>
+
+  <!-- SVG Gradient Definition -->
+  <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+  </svg>
+
+  <!-- Aurora Background Effects -->
+  <div class="aurora">
+    <div class="aurora-1"></div>
+    <div class="aurora-2"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-content">
+      <a href="/" class="brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+        Stafaband
+      </a>
+      <div class="nav-pill">
+        Portal Musik <span id="currentYear"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO & SEARCH SECTION -->
+  <header class="hero container">
+    <div class="search-wrapper">
+      <form id="autoform" action="https://metrolagu.website/download" method="GET" role="search">
+        <div class="search-box">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <input 
+            id="autoinput" 
+            class="search-input" 
+            autocomplete="off" 
+            type="text" 
+            name="query" 
+            placeholder="Cari lagu, artis, atau album di sini..." 
+            required 
+          >
+          <button class="search-btn" type="submit">Cari MP3</button>
+        </div>
+      </form>
+    </div>
+    <h1>Temukan & Download <br><span>Lagu MP3 Sepuasnya</span></h1>
+    <p>Stafaband hadir dengan wajah baru. Jelajahi miliaran database musik global dan unduh lagu favorit Anda dalam format audio MP3 berkualitas studio secara instan.</p>
+  </header>
+
+  <main>
+    <!-- FEATURES GRID -->
+    <section class="features-section container">
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="f-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+          </div>
+          <h3>Kualitas Suara Premium</h3>
+          <p>Dapatkan pengalaman mendengarkan musik terbaik. Mesin Stafaband mengekstrak audio dengan bitrate maksimal 320kbps yang kaya akan detail suara.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          </div>
+          <h3>Unduhan Kilat & Ringan</h3>
+          <p>Server <i>cloud</i> kami menjamin proses konversi dan unduh berjalan sangat ringan. Simpan puluhan lagu ke memori HP Anda tanpa perlu menunggu lama.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3>Bebas Biaya, Tanpa Login</h3>
+          <p>Kami menjunjung tinggi privasi Anda. Nikmati seluruh fasilitas situs ini murni gratis tanpa perlu membuat akun, tanpa langganan, dan 100% aman.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIQUE SEO ARTICLE & FAQ -->
+    <section class="seo-container">
+      <div class="container article-wrap">
+        <h2>Eksplorasi Dunia Musik Bersama Stafaband</h2>
+        <p>
+          Bagi para penikmat audio, memiliki akses instan ke deretan lagu favorit adalah sebuah keharusan. Sebagai salah satu pelopor platform pencari musik di Indonesia, <strong>Stafaband</strong> terus berinovasi di tahun <span id="currentYear"></span> ini dengan menyajikan antarmuka (<em>User Interface</em>) yang lebih modern, elegan, dan pastinya bebas dari iklan tautan (<em>redirect</em>) yang kerap meresahkan pengguna internet.
+        </p>
+        
+        <h3>Koleksi Gudang Lagu MP3 Terlengkap</h3>
+        <p>
+          Mencari lagu spesifik kini bukan lagi masalah. Mulai dari tembang nostalgia lawas, <em>top hits</em> pop Indonesia, dangdut koplo terbaru, hingga musik DJ yang sedang viral di platform TikTok, semuanya terangkum lengkap di <strong>situs download lagu Stafaband</strong>. Mesin pintar kami secara otomatis menyinkronkan data dengan pusat pangkalan musik global, memastikan Anda selalu mendapatkan <em>update</em> rilis lagu paling baru hari ini.
+        </p>
+
+        <h3>Download Lagu di Stafaband Lebih Praktis</h3>
+        <p>
+          Kami sangat mengerti bahwa waktu Anda berharga. Oleh karena itu, navigasi di situs web kami dirancang super praktis. Anda tidak perlu menginstal aplikasi tambahan di HP Android maupun iPhone. Cukup ketik saja potongan lirik, judul album, atau nama penyanyi di kolom pencarian kaca di atas. Sistem <em>smart-suggestion</em> kami akan menebak apa yang Anda cari, lalu menyajikannya dalam format MP3 siap unduh.
+        </p>
+
+        <!-- ALTERNATIVE FAQ -->
+        <h3 style="margin-top: 48px;">Pertanyaan Seputar Platform Kami</h3>
+        
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>Bagaimana cara mencari lagu di Stafaband?</h4>
+            <p>Sangat mudah. Arahkan kursor atau sentuh kolom pencarian di bagian atas layar. Ketikkan kata kunci lagu (misalnya: nama penyanyi), lalu tekan tombol "Cari MP3". Pilih lagu dari daftar hasil, lalu klik tombol Download.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Apakah lagu yang diunduh bisa diputar offline?</h4>
+            <p>Tentu saja! Semua file audio yang Anda download dari Stafaband akan tersimpan secara permanen di memori perangkat (HP/Komputer) Anda. Anda bebas memutarnya kapan saja lewat pemutar musik bawaan tanpa memerlukan kuota internet lagi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer container">
+    <div class="footer-brand">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      Stafaband
+    </div>
+    <div class="footer-copy">
+      &copy; <span id="currentYear"></span> <a href="https://www.stafaband456.eu.org">Stafaband</a> Music Portal. Situs ini beroperasi sebagai mesin pencari independen dan tidak ada data yang di-hosting di server kami.
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  
+  <script type="text/javascript">
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    $(document).ready(function () {
+      
+      $("#autoinput").autocomplete({
+        source: function (request, response) {
+          $.ajax({
+            url: "https://suggestqueries.google.com/complete/search",
+            dataType: "jsonp",
+            data: {
+              client: "firefox", 
+              ds: "yt",
+              q: request.term
+            },
+            success: function (data) {
+              if (data && data[1]) {
+                response(data[1]);
+              } else {
+                response([]);
+              }
+            }
+          });
+        },
+        minLength: 2,
+        select: function (event, ui) {
+          $("#autoinput").val(ui.item.value);
+          $("#autoform").submit();
+        },
+        position: {
+          my: "left top",
+          at: "left bottom+20",
+          of: ".search-box",
+          collision: "none"
+        },
+        appendTo: ".search-wrapper"
+      });
+
+      /* Custom width adjustment for autocomplete box */
+      $.ui.autocomplete.prototype._resizeMenu = function () {
+        this.menu.element.css("width", "100%");
+      };
+      
+    });
+  </script>
+
+  <!-- UNIQUE SCHEMA MARKUP FOR SEO (WebSite & Alternate FAQ) -->
+  <script type="application/ld+json">[
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Stafaband",
+      "alternateName":["Stafa Band MP3", "Musik Stafaband", "Stafaband"],
+      "url": "https://stafaband456.github.io",
+      "description": "Platform pencari dan download lagu MP3 gratis dengan kualitas terbaik.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://metrolagu.website/download?query={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity":[
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara mencari lagu di Stafaband?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sangat mudah. Arahkan kursor atau sentuh kolom pencarian di bagian atas layar. Ketikkan kata kunci lagu (misalnya: nama penyanyi), lalu tekan tombol Cari MP3. Pilih lagu dari daftar hasil, lalu klik tombol Download."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah lagu yang diunduh bisa diputar offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tentu saja! Semua file audio yang Anda download dari Stafaband akan tersimpan secara permanen di memori perangkat (HP/Komputer) Anda. Anda bebas memutarnya kapan saja lewat pemutar musik bawaan tanpa memerlukan kuota internet lagi."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
 </body>
 </html>
